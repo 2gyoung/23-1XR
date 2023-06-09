@@ -14,8 +14,8 @@ public class DishCollision : MonoBehaviour
         //¹ä±×¸©°ú Á¢ÃË
         if(other.gameObject.tag == "Food")
         {
-            GameObject director = GameObject.Find("DishDirector");
-            director.GetComponent<DishDirector>().IncreaseFood();
+            GameObject smObject = GameObject.Find("ScoreManager");
+            smObject.GetComponent<ScoreManager>().IncreaseFood();
         }
     }
 }

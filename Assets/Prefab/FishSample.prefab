@@ -14,7 +14,6 @@ GameObject:
   - component: {fileID: 2386776619211368636}
   - component: {fileID: 1544916818983772033}
   - component: {fileID: -5002277242661710103}
-  - component: {fileID: 708814458637982843}
   m_Layer: 0
   m_Name: FishSample
   m_TagString: Player
@@ -128,15 +127,3 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   positionY: 0.4
   prefab: []
---- !u!114 &708814458637982843
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8665647578939736405}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d91c922a792d2454385c0f96a87c25ee, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 

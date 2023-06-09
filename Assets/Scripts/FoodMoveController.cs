@@ -52,7 +52,7 @@ public class FoodMoveController : MonoBehaviour
         if (!TouchHelper.IsDown) return;
         if (Physics.Raycast(mainCamera.ScreenPointToRay(InputPosition), out var hits, mainCamera.farClipPlane))
         {
-            if (hits.transform.gameObject.tag.Equals("Player"))
+            if (hits.transform.gameObject.tag.Equals("Food"))
             {
                 HoldingObject = hits.transform.gameObject;
                 OnHold();
