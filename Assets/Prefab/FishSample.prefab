@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: -5002277242661710103}
   m_Layer: 0
   m_Name: FishSample
-  m_TagString: Player
+  m_TagString: Food
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -127,3 +127,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   positionY: 0.4
   prefab: []
+  throwForce: 10000

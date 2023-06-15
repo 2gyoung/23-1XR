@@ -510,7 +510,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   indicator: {fileID: 1997493536}
-  bowl: {fileID: 0}
+  bowl: {fileID: 6201277534908527496, guid: 868d30975dd2c7248822083f5811c197, type: 3}
 --- !u!1 &542833661
 GameObject:
   m_ObjectHideFlags: 0

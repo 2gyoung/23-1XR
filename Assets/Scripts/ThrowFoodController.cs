@@ -22,7 +22,7 @@ public class ThrowFoodController : FoodMoveController
             rigidbody.useGravity = true;
             var direction = mainCamera.transform.forward;
             var delta = (pos.y - _inputPositionPivot.y) * 100f / Screen.height;
-            var throwForce = 2.5f * delta;
+            var throwForce = 1000f * delta;
             var throwVector = direction + mainCamera.transform.up + mainCamera.transform.forward * throwForce;
             rigidbody.AddForce((direction + Vector3.up) * 4.5f * delta);
             HoldingObject.transform.SetParent(null);
