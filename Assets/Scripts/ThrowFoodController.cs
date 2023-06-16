@@ -15,7 +15,6 @@ public class ThrowFoodController : FoodMoveController
 
     protected override void Update()
     {
-        //Debug.Log("Please...");
         //Nothing...
     }
     protected override void OnPut(Vector3 pos)

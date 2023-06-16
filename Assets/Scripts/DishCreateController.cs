@@ -60,8 +60,6 @@ public class DishCreateController : MonoBehaviour
             indicator.transform.position = hitinfo[0].pose.position;
             indicator.transform.rotation = hitinfo[0].pose.rotation;
 
-            //인디케이터 위치를 위로 0.1m 올림
-            //indicator.transform.position += indicator.transform.up * 0.1f;
         }
         else
         {
