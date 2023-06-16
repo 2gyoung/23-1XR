@@ -22,7 +22,7 @@ public class ScoreManager : MonoBehaviour
     public GameObject SucceessEffect;
     public Transform EffectPos;
     public GameObject DestroyAnimal;
-    private float ResetTime = 3f;
+    private float ResetTime = 5f;
     private float Timer;
 
     // Start is called before the first frame update
@@ -59,8 +59,8 @@ public class ScoreManager : MonoBehaviour
             //Debug.Log("TIme");
             if (Timer >= ResetTime)
             {
-                //Debug.Log("TimeOver");
-                DestroyAnimal = GameObject.Find("Animal");
+                Debug.Log("TimeOver");
+                DestroyAnimal = GameObject.FindGameObjectWithTag("Animal");
                 Destroy(DestroyAnimal);
                 SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
                 Timer = 0;
@@ -79,9 +79,10 @@ public class ScoreManager : MonoBehaviour
     }
 
     // 동물 등장 연출
+    // 위치 화면의 가운데로 조정할것
     public void ShowAnimal()
     {
-        GameObject animal = (GameObject)Instantiate(RandomAnimal(), Camera.main.WorldToViewportPoint(AnimalPos.position), Quaternion.Euler(0,180,0));
+        GameObject animal = (GameObject)Instantiate(RandomAnimal(), AnimalPos.position, Quaternion.Euler(0,180,0));
         GameObject successEffect = Instantiate(SucceessEffect);
         successEffect.transform.position = EffectPos.position;
     }
