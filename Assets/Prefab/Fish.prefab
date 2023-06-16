@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 7972604566341466610}
   - component: {fileID: 7985669201970473664}
   - component: {fileID: 7996697530722886652}
+  - component: {fileID: 1855943505023242946}
   m_Layer: 0
   m_Name: Fish4/4
   m_TagString: Untagged
@@ -81,6 +82,19 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!65 &1855943505023242946
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7973932505440605850}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.094405726, y: 0.0477641, z: 0.21511996}
+  m_Center: {x: -0.009460026, y: -0.000014925376, z: -0.0009180233}
 --- !u!1 &7974821756052668120
 GameObject:
   m_ObjectHideFlags: 0
@@ -257,6 +271,7 @@ GameObject:
   - component: {fileID: 7974466615346906347}
   - component: {fileID: 7974466615346906344}
   - component: {fileID: 7974466615346906345}
+  - component: {fileID: 8151926209048231475}
   m_Layer: 0
   m_Name: Fish
   m_TagString: Food
@@ -356,7 +371,7 @@ MeshCollider:
   m_GameObject: {fileID: 7975569136559167192}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 4
   m_Convex: 0
   m_CookingOptions: 30
@@ -374,9 +389,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   positionY: 0.4
-  FoodPrefab: []
-  throwForceMultiplier: 1
-  gravityMultiplier: 1
+  prefab: []
+  throwForce: 100
+--- !u!65 &8151926209048231475
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7975569136559167192}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.06627992, y: 0.025871327, z: 0.285626}
+  m_Center: {x: -0.0014762264, y: 0.0005133962, z: 0.011596307}
 --- !u!1 &7975711506406554424
 GameObject:
   m_ObjectHideFlags: 0

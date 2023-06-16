@@ -16,14 +16,16 @@ public class FoodMoveController : MonoBehaviour
     protected GameObject HoldingObject;
     protected Vector3 InputPosition;
     protected bool isHolding; // 추가: 음식을 들고 있는 상태 여부
-
+    private void Awake()
+    {
+    }
     void Start()
     {
         mainCamera = Camera.main;
         Reset();
     }
 
-    void Update()
+    protected virtual void Update()
     {
 #if !UNITY_EDITOR
         if (Input.touchCount == 0) return;
@@ -34,7 +36,10 @@ public class FoodMoveController : MonoBehaviour
         {
             if (TouchHelper.IsUp && isHolding) // 수정: 음식을 들고 있는 상태에서 터치를 놓았을 때
             {
-                OnPut(InputPosition);
+                //Debug.Log("FoodMove::OnPut");
+                ThrowFoodController temp = FindObjectOfType<ThrowFoodController>();
+                temp.isHolding = true;
+                temp.OnPut(InputPosition);
                 isHolding = false; // 추가: 음식을 들고 있는 상태 해제
                 HoldingObject = null; // 수정: 들고 있던 음식 객체 초기화
                 return;
@@ -89,7 +94,7 @@ public class FoodMoveController : MonoBehaviour
                 new Vector3(0.5f, positionY, mainCamera.nearClipPlane * CameraDistance));
     }
 
-    private void Reset()
+    protected virtual void Reset()
     {
         var pos = mainCamera.ViewportToWorldPoint(new Vector3(0.5f, positionY, mainCamera.nearClipPlane * CameraDistance));
         var index = Random.Range(0, prefab.Length);
@@ -98,5 +103,6 @@ public class FoodMoveController : MonoBehaviour
         rigidbody.useGravity = false;
         rigidbody.velocity = Vector3.zero;
         rigidbody.angularVelocity = Vector3.zero;
+        Destroy(obj);
     }
 }

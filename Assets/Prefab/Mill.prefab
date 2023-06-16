@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 8502760663297415328}
   - component: {fileID: 7615797649415158392}
   - component: {fileID: 1476800511935138002}
+  - component: {fileID: 4759264530487829927}
   m_Layer: 0
   m_Name: Icosphere.001
   m_TagString: Untagged
@@ -81,6 +82,19 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!65 &4759264530487829927
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6163294285009704231}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.00455782, y: 0.001586423, z: 0.00050881587}
+  m_Center: {x: 0.0000958544, y: -0.000020997653, z: 0.001116633}
 --- !u!1 &6406774451592196507
 GameObject:
   m_ObjectHideFlags: 0
@@ -141,7 +155,7 @@ MeshCollider:
   m_GameObject: {fileID: 6406774451592196507}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 4
   m_Convex: 0
   m_CookingOptions: 30
@@ -159,9 +173,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   positionY: 0.4
-  FoodPrefab: []
-  throwForceMultiplier: 1
-  gravityMultiplier: 1
+  prefab: []
+  throwForce: 100
 --- !u!1 &7841400669978003880
 GameObject:
   m_ObjectHideFlags: 0
@@ -173,6 +186,7 @@ GameObject:
   - component: {fileID: 486145121225100859}
   - component: {fileID: 8406255022590137859}
   - component: {fileID: 610672866346603960}
+  - component: {fileID: 4255848098399125653}
   m_Layer: 0
   m_Name: Icosphere
   m_TagString: Untagged
@@ -243,3 +257,16 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!65 &4255848098399125653
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7841400669978003880}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.0064826403, y: 0.0068162396, z: 0.0025692075}
+  m_Center: {x: 0, y: 0, z: 0.00021815802}
