@@ -18,7 +18,7 @@ public class ScoreManager : MonoBehaviour
     public GameObject SucceessImage;
     // 동물 모델링 변수
     public GameObject[] AnimalPrefabs;
-    public Transform AnimalPos;
+    public Vector3 AniPos;
     public GameObject SucceessEffect;
     public Transform EffectPos;
     public GameObject DestroyAnimal;
@@ -82,7 +82,8 @@ public class ScoreManager : MonoBehaviour
     // 위치 화면의 가운데로 조정할것
     public void ShowAnimal()
     {
-        GameObject animal = (GameObject)Instantiate(RandomAnimal(), AnimalPos.position, Quaternion.Euler(0,180,0));
+        AniPos = new Vector3(0, 0, 5);
+        GameObject animal = (GameObject)Instantiate(RandomAnimal(), AniPos, Quaternion.Euler(0,180,0));
         GameObject successEffect = Instantiate(SucceessEffect);
         successEffect.transform.position = EffectPos.position;
     }
