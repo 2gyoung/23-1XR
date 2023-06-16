@@ -27,7 +27,8 @@ public class ScoreManager : MonoBehaviour
         this.foodGage = GameObject.Find("FoodGage");
         this.foodGage.GetComponent<Image>().fillAmount = 0f;
         SucceessImage.SetActive(false);
-        ShowAnimal();
+        // 테스트용
+        //ShowAnimal();
     }
 
     public void IncreaseFood()

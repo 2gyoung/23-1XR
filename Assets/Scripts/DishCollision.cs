@@ -14,6 +14,7 @@ public class DishCollision : MonoBehaviour
         //¹ä±×¸©°ú Á¢ÃË
         if(other.gameObject.tag == "Food")
         {
+            Debug.Log("Ãæµ¹");
             GameObject smObject = GameObject.Find("ScoreManager");
             smObject.GetComponent<ScoreManager>().IncreaseFood();
         }
