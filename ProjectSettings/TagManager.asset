@@ -7,6 +7,8 @@ TagManager:
   - Bowl
   - FoodGage
   - Food
+  - FxTemporaire
+  - Animal
   layers:
   - Default
   - TransparentFX
